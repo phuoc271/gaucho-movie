@@ -1,0 +1,272 @@
+/* @tailwind base;
+@tailwind components;
+@tailwind utilities; */
+
+.navbar-logo {
+    vertical-align: middle;
+    border-style: none;
+    width: 150px;
+    height: 100px;
+}
+
+.navbar-background {
+    background-color: black;
+}
+
+.navbar-link {
+    font-size: x-large;
+    color: white !important;
+    margin-right: 50px !important;
+}
+
+.banner-all {
+    text-align: center;
+    position: relative;
+    background-color: black;
+}
+
+.banner-logotitle {
+    background-color: rgb(160 82 45);
+    text-align: center;
+    color: white;
+    border-color: white;
+    font-weight: bolder;
+    width: 150px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-style: groove;
+    border-color: white;
+}
+
+.banner {
+    width: 100%;
+    height: 800px;
+    display: block;
+    margin: 0 auto;
+    /* Để hình nằm giữa */
+}
+
+.banner2 {
+    width: 400px;
+    height: 600px;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    position: absolute;
+
+}
+
+.banner-mo {
+    width: 100%;
+    height: 800px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    /* Màu nền với độ mờ */
+    color: white;
+
+}
+
+.banner2:hover {
+    backdrop-filter: blur(5px);
+    /* Áp dụng hiệu ứng làm mờ */
+    -webkit-backdrop-filter: blur(5px);
+    transition: opacity 2s ease;
+}
+
+.play {
+    width: 100px;
+    opacity: 0;
+    /* Ẩn nội dung ban đầu */
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    position: absolute;
+
+}
+
+.banner2:hover .play {
+    opacity: 1;
+    /* Hiển thị nội dung khi hover */
+}
+
+.banner-canchinh {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    /* Đảm bảo nội dung nằm trên cùng */
+    color: white;
+}
+
+.banner-title {
+    font-size: 3.5 rem;
+    font: bold;
+}
+
+.content,
+.image {
+    flex: 1;
+    /* Mỗi div sẽ chiếm 50% chiều rộng */
+    background-color: rgba(0, 0, 0, 0.3);
+    width: 100%;
+    height: 100%;
+}
+
+.content {
+    /* Tùy chỉnh màu nền nếu cần */
+    text-align: left;
+    padding: 50px;
+}
+
+.image {
+    /* Tùy chỉnh màu nền nếu cần */
+    text-align: center;
+    position: relative;
+
+}
+
+.rating {
+    width: 40px;
+    padding: 5px;
+}
+
+.noidung {
+    text-align: left;
+}
+
+.button-chitiet {
+    background-color: #333333;
+    color: white;
+}
+
+.button-xemphim {
+    background-color: #CC0000;
+    color: white;
+}
+
+button {
+    width: 100px;
+    height: 50px;
+    padding: 4px;
+    margin-right: 30px;
+}
+
+.movie-all {
+    background-color: black;
+    color: white;
+    padding: 20px;
+}
+
+.movie-title {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.movie {
+    position: relative;
+}
+
+.phim {
+    width: 100%;
+    height: 380px;
+    object-fit: cover;
+    /* Ensures images cover the whole area */
+}
+
+.movie2 {
+    position: relative;
+    margin: 10px;
+    /* Adjust spacing between movies */
+}
+
+.mo3 {
+    width: 100%;
+    height: 380px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    /* Màu nền với độ mờ */
+    color: white;
+}
+
+.name-movie {
+    text-align: center;
+    font-weight: bolder;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    font-size: large;
+    margin-bottom: 2rem;
+}
+
+.movie2:hover .play {
+    opacity: 1;
+    /* Hiển thị nội dung khi hover */
+}
+
+.movie2:hover .mo3 {
+    backdrop-filter: blur(5px);
+    /* Áp dụng hiệu ứng làm mờ */
+    -webkit-backdrop-filter: blur(5px);
+    transition: opacity 2s ease;
+}
+
+.play {
+    opacity: 0;
+    transition: opacity 2s ease;
+    position: absolute;
+    top: 25%;
+    left: 40%;
+    transform: translate(-50%, -50%);
+}
+
+.play-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.movie-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+    /* khoảng cách giữa các phần tử, tương đương với gap-4 của Tailwind */
+}
+
+@media (min-width: 640px) {
+    .movie-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (min-width: 900px) {
+    .movie-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+@media (min-width: 1400px) {
+    .movie-grid {
+        grid-template-columns: repeat(6, 1fr);
+    }
+}

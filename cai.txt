@@ -1,0 +1,9 @@
+npm install --save react-modal
+npm install react-youtube   
+npm i react-multi-carousel  
+npm i react-responsive-carousel
+npm install -g react-devtools     
+npm install node-fetch@2 --save
+npm install bootstrap
+npm install bootstrap@4.6.0 react-bootstrap@1.6.1
+npm install react-bootstrap
